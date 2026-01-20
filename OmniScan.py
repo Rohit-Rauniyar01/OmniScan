@@ -5,7 +5,7 @@ For Web Applications and APIs - EDUCATIONAL PURPOSES ONLY
 
 Author: Security Researcher
 Version: 3.2 - Multi-threaded & Enhanced Accuracy
-Usage: python omniscan.py -u <URL> [options]
+Usage: python omniscan.py -u https://example.com [options]
 """
 
 import requests
@@ -40,15 +40,15 @@ class ConsoleLogger:
         prefix = f"[{timestamp}] " if timestamp else ""
         full_message = f"{color}{prefix}{message}{Style.RESET_ALL}"
         
-        # Print to console with thread safety
+        
         with self.lock:
             print(full_message)
             
-            # Strip colors for file output
+            
             plain_message = re.sub(r'\x1b\[[0-9;]*m', '', f"{prefix}{message}")
             self.log_buffer.append(plain_message)
             
-            # Write to file immediately if specified
+            
             if self.output_file:
                 self.flush_to_file()
     
